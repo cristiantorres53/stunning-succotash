@@ -1,0 +1,1505 @@
+{
+	"info": {
+		"_postman_id": "6753b30a-bd96-4732-b49a-cd42fea251d9",
+		"name": "RickandMortyAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24469547"
+	},
+	"item": [
+		{
+			"name": "Page3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 56 coincide con el nombre Bootleg Portal Chemist Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 56)\r",
+							"    pm.expect(character.name).to.equal(\"Bootleg Portal Chemist Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}3",
+					"host": [
+						"{{UrlBase}}{{Page}}3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 28 coincide con el nombre Attila Starwar\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 28)\r",
+							"    pm.expect(character.name).to.equal(\"Attila Starwar\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}2",
+					"host": [
+						"{{UrlBase}}{{Page}}2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 66 coincide con el nombre Coach Feratu (Balik Alistane)\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 66)\r",
+							"    pm.expect(character.name).to.equal(\"Coach Feratu (Balik Alistane)\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}4",
+					"host": [
+						"{{UrlBase}}{{Page}}4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el objeto contiene nombre Mega Fruit Farmer Rick\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Mega Fruit Farmer Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}220",
+					"host": [
+						"{{UrlBase}}220"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get multiple characters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Data array is empty\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    console.log(jsonData)\r",
+							"    pm.expect(jsonData.length).to.eql(0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}827,828,829",
+					"host": [
+						"{{UrlBase}}827,828,829"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 6 coincide con el nombre Abadango Cluster Princess\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 4)\r",
+							"    pm.expect(character.name).to.equal(\"Abadango Cluster Princess\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}1",
+					"host": [
+						"{{UrlBase}}{{Page}}1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 93 coincide con el nombre Diablo Verde\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 93)\r",
+							"    pm.expect(character.name).to.equal(\"Diablo Verde\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}5",
+					"host": [
+						"{{UrlBase}}{{Page}}5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all characters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 2 coincide con el nombre\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 2)\r",
+							"    pm.expect(character.name).to.equal(\"Morty Smith\");\r",
+							"\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}",
+					"host": [
+						"{{UrlBase}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 112 coincide con el nombre Eric McMan\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 112)\r",
+							"    pm.expect(character.name).to.equal(\"Eric McMan\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}6",
+					"host": [
+						"{{UrlBase}}{{Page}}6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 129 coincide con el nombre Fulgora\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 129)\r",
+							"    pm.expect(character.name).to.equal(\"Fulgora\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}7",
+					"host": [
+						"{{UrlBase}}{{Page}}7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 153 coincide con el nombre Hamster In Butt\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 153)\r",
+							"    pm.expect(character.name).to.equal(\"Hamster In Butt\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}8",
+					"host": [
+						"{{UrlBase}}{{Page}}8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page9",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 163 coincide con el nombre Ideal Jerry\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 163)\r",
+							"    pm.expect(character.name).to.equal(\"Ideal Jerry\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}9",
+					"host": [
+						"{{UrlBase}}{{Page}}9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 184 coincide con el nombre Jon\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 184)\r",
+							"    pm.expect(character.name).to.equal(\"Jon\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}10",
+					"host": [
+						"{{UrlBase}}{{Page}}10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 218 coincide con el nombre Mechanical Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 218)\r",
+							"    pm.expect(character.name).to.equal(\"Mechanical Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}11",
+					"host": [
+						"{{UrlBase}}{{Page}}11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page12",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 228 coincide con el nombre Mohawk Guy\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 228)\r",
+							"    pm.expect(character.name).to.equal(\"Mohawk Guy\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}12",
+					"host": [
+						"{{UrlBase}}{{Page}}12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page13",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 245 coincide con el nombre Mrs. Lipkip\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 245)\r",
+							"    pm.expect(character.name).to.equal(\"Mrs. Lipkip\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}13",
+					"host": [
+						"{{UrlBase}}{{Page}}13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 265 coincide con el nombre Pickle Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 265)\r",
+							"    pm.expect(character.name).to.equal(\"Pickle Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}14",
+					"host": [
+						"{{UrlBase}}{{Page}}14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 286 coincide con el nombre Rick D-99\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 286)\r",
+							"    pm.expect(character.name).to.equal(\"Rick D-99\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}15",
+					"host": [
+						"{{UrlBase}}{{Page}}15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 304 coincide con el nombre Scary Brandon\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 304)\r",
+							"    pm.expect(character.name).to.equal(\"Scary Brandon\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}16",
+					"host": [
+						"{{UrlBase}}{{Page}}16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page17",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 325 coincide con el nombre Slick Morty\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 325)\r",
+							"    pm.expect(character.name).to.equal(\"Slick Morty\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}17",
+					"host": [
+						"{{UrlBase}}{{Page}}17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page18",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 342 coincide con el nombre Taint Washer\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 342)\r",
+							"    pm.expect(character.name).to.equal(\"Taint Washer\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}18",
+					"host": [
+						"{{UrlBase}}{{Page}}18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page19",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 365 coincide con el nombre Tricia Lange\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 365)\r",
+							"    pm.expect(character.name).to.equal(\"Tricia Lange\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}19",
+					"host": [
+						"{{UrlBase}}{{Page}}19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 387 coincide con el nombre Zarbadar's Mytholog\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 387)\r",
+							"    pm.expect(character.name).to.equal(\"Zarbadar's Mytholog\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}20",
+					"host": [
+						"{{UrlBase}}{{Page}}20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page21",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 407 coincide con el nombre Regular Tyrion Lannister\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 407)\r",
+							"    pm.expect(character.name).to.equal(\"Regular Tyrion Lannister\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}21",
+					"host": [
+						"{{UrlBase}}{{Page}}21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page22",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 424 coincide con el nombre Pizza-person\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 424)\r",
+							"    pm.expect(character.name).to.equal(\"Pizza-person\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}22",
+					"host": [
+						"{{UrlBase}}{{Page}}22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page23",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 447 coincide con el nombre Anchor Gear\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 447)\r",
+							"    pm.expect(character.name).to.equal(\"Anchor Gear\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}23",
+					"host": [
+						"{{UrlBase}}{{Page}}23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page24",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 470 coincide con el nombre Alien Spa Employee\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 470)\r",
+							"    pm.expect(character.name).to.equal(\"Alien Spa Employee\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}24",
+					"host": [
+						"{{UrlBase}}{{Page}}24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page25",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 484 coincide con el nombre Sheik Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 484)\r",
+							"    pm.expect(character.name).to.equal(\"Sheik Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}25",
+					"host": [
+						"{{UrlBase}}{{Page}}25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page26",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 507 coincide con el nombre Fascist Teddy Bear Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 507)\r",
+							"    pm.expect(character.name).to.equal(\"Fascist Teddy Bear Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}26",
+					"host": [
+						"{{UrlBase}}{{Page}}26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page27",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 524 coincide con el nombre Kirkland Brand Mr. Meeseeks\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 524)\r",
+							"    pm.expect(character.name).to.equal(\"Kirkland Brand Mr. Meeseeks\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}27",
+					"host": [
+						"{{UrlBase}}{{Page}}27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page28",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 546 coincide con el nombre Angie Flint\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 546)\r",
+							"    pm.expect(character.name).to.equal(\"Angie Flint\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}28",
+					"host": [
+						"{{UrlBase}}{{Page}}28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page29",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 565 coincide con el nombre Debrah\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 565)\r",
+							"    pm.expect(character.name).to.equal(\"Debrah\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}29",
+					"host": [
+						"{{UrlBase}}{{Page}}29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page30",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 583 coincide con el nombre 80's snake\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 583)\r",
+							"    pm.expect(character.name).to.equal(\"80's snake\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}30",
+					"host": [
+						"{{UrlBase}}{{Page}}30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page31",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 608 coincide con el nombre Jesus Christ\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 608)\r",
+							"    pm.expect(character.name).to.equal(\"Jesus Christ\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}31",
+					"host": [
+						"{{UrlBase}}{{Page}}31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page32",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 628 coincide con el nombre Beth Smith\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 628)\r",
+							"    pm.expect(character.name).to.equal(\"Beth Smith\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}32",
+					"host": [
+						"{{UrlBase}}{{Page}}32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page33",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 647 coincide con el nombre Troy\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 647)\r",
+							"    pm.expect(character.name).to.equal(\"Troy\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}33",
+					"host": [
+						"{{UrlBase}}{{Page}}33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page34",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 668 coincide con el nombre Defiance Squanchette\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 668)\r",
+							"    pm.expect(character.name).to.equal(\"Defiance Squanchette\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}34",
+					"host": [
+						"{{UrlBase}}{{Page}}34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page35",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 683 coincide con el nombre Evolved Narnian\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 683)\r",
+							"    pm.expect(character.name).to.equal(\"Evolved Narnian\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}35",
+					"host": [
+						"{{UrlBase}}{{Page}}35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page36",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 707 coincide con el nombre Squid Costume Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 707)\r",
+							"    pm.expect(character.name).to.equal(\"Squid Costume Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}36",
+					"host": [
+						"{{UrlBase}}{{Page}}36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page37",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 731 coincide con el nombre Naruto Smith\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 731)\r",
+							"    pm.expect(character.name).to.equal(\"Naruto Smith\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}37",
+					"host": [
+						"{{UrlBase}}{{Page}}37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page38",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 747 coincide con el nombre Cenobite\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 747)\r",
+							"    pm.expect(character.name).to.equal(\"Cenobite\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}38",
+					"host": [
+						"{{UrlBase}}{{Page}}38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page39",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 767 coincide con el nombre President Turkey\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 767)\r",
+							"    pm.expect(character.name).to.equal(\"President Turkey\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}39",
+					"host": [
+						"{{UrlBase}}{{Page}}39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page40",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 784 coincide con el nombre Memory Rick\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 784)\r",
+							"    pm.expect(character.name).to.equal(\"Memory Rick\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}40",
+					"host": [
+						"{{UrlBase}}{{Page}}40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page41",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 806 coincide con el nombre Metaphor for Capitalism\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 806)\r",
+							"    pm.expect(character.name).to.equal(\"Metaphor for Capitalism\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}41",
+					"host": [
+						"{{UrlBase}}{{Page}}41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page42",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"el personaje de la serie con id 825 coincide con el nombre Young Jerry\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var character=jsonData.results.find(x => x.id == 825)\r",
+							"    pm.expect(character.name).to.equal(\"Young Jerry\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{UrlBase}}{{Page}}42",
+					"host": [
+						"{{UrlBase}}{{Page}}42"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
